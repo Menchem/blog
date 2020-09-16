@@ -1,6 +1,3 @@
-# blog
-<<<<<<< HEAD
-
 > A Vue.js project
 
 ## Build Setup
