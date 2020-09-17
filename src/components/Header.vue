@@ -5,9 +5,9 @@
       <ul class="clearfix">
         <li><router-link to="/"><span class="iconfont icon-shouye"></span>&nbsp;首页</router-link></li>
         <li><router-link to="/category"><span class="iconfont icon-zuopin"></span>&nbsp;文章</router-link></li>
-        <li><router-link to="/music"><span class="iconfont1 icon-yinle"></span>&nbsp;音乐</router-link></li>
+        <li><router-link to="/music"><span class="iconfont1 icon-yinle"></span>&nbsp;听歌</router-link></li>
         <li><router-link to="/about"><span class="iconfont icon-wode"></span>&nbsp;关于我</router-link></li>
-        <li class="qr-box"><router-link to="/wap"><span class="iconfont icon-gengduo"></span>&nbsp;{{mes}}</router-link><div class="qrcode"><img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://www.zhoumengcheng.cn"></div></li>
+        <li class="qr-box"><router-link to="/wap"><span class="iconfont icon-gengduo"></span>&nbsp;{{mes}}</router-link><div class="qrcode"><img src="../assets/wap.png"></div></li>
       </ul>
       <div class="login">
         <a class="login-btn" href="/#/login">{{$store.state.loginName}}</a>

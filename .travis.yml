@@ -24,6 +24,7 @@ after_script:
   - git add .
   - git commit -m "auto build"
   - git push --force --quiet "https://${blog}@${GH_REF}" master:dev
+  - ssh root@139.155.230.97 'cd /www/home && git fetch --all && git reset --hard origin/dev && git pull origin dev'
 
 branches:
   only:
