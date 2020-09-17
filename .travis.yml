@@ -32,4 +32,4 @@ branches:
 
 env:
   global:
-    - GH_REF: git@github.com:caps1023/blog.git
+    - GH_REF: github.com/caps1023/blog.git
