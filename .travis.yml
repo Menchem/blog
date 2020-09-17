@@ -23,7 +23,7 @@ after_script:
   - git config user.email "284939796@qq.com"
   - git add .
   - git commit -m "auto build"
-  - git push origin --force --quiet "https://${blog}@${GH_REF}" master:dev
+  - git push --force --quiet "https://${blog}@${GH_REF}" master:dev
 
 branches:
   only:
