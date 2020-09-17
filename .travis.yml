@@ -5,25 +5,25 @@ node_js: stable
 cache:
   directories:
     - node_modules
-    
+
 before_install:
 - openssl aes-256-cbc -K $encrypted_862f62ddd419_key -iv $encrypted_862f62ddd419_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
-  
+
 install:
     - npm install
-    
+
 script:
     - npm run build
-    
+
 after_script:
   - cd ./dist
   - git init
   - git config user.name "zhou"
   - git config user.email "284939796@qq.com"
   - git add .
-  - git commit -m "自动部署的"
-  - git push --force --quiet "https://${blog}@${GH_REF}" master:dev
+  - git commit -m "auto build"
+  - git push origin --force --quiet "https://${blog}@${GH_REF}" master:dev
 
 branches:
   only:
