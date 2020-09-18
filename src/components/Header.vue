@@ -100,6 +100,7 @@
           left: -25px;
           top: 50px;
           z-index: 100;
+          transform-origin:60px 0;
         }
         a{
           color: #fff;
@@ -112,6 +113,7 @@
       li.qr-box:hover{
         .qrcode{
           display: block;
+          animation: zoom .5s linear both;
         }
       }
     }
@@ -127,6 +129,16 @@
     a:hover{
       color: #09dbf1;
     }
+  }
+}
+@keyframes zoom{
+  0%{
+    opacity: 0;
+    transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
   }
 }
 </style>

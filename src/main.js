@@ -23,12 +23,14 @@ const router = new Router({
     {
       name: 'Home',
       path: '/',
-      component: () => import('@/components/Home.vue')
+      component: () => import('@/components/Home.vue'),
+      meta: {title: "年朔的博客首页"}
     },
     {
       name: 'Login',
       path: '/login',
-      component: () => import('@/components/Login.vue')
+      component: () => import('@/components/Login.vue'),
+      mata: {title: "网站登录"}
     },
     {
       name: 'Show',
@@ -43,7 +45,8 @@ const router = new Router({
     {
       name: 'About',
       path: '/about',
-      component: () => import('@/components/About.vue')
+      component: () => import('@/components/About.vue'),
+      meta: {title: "关于我"}
     },
     {
       name: 'Wap',
@@ -53,9 +56,17 @@ const router = new Router({
     {
       name: 'Music',
       path: '/music',
-      component: () => import('@/components/Music.vue')
+      component: () => import('@/components/Music.vue'),
+      meta: {title: "欣赏音乐"}
     }
   ]
+})
+
+router.beforeEach((to,from,next)=>{
+  if(to.meta.title){
+    document.title = to.meta.title;
+  }
+  next();
 })
 
 router.afterEach((to,from)=>{

@@ -28,7 +28,7 @@ export default{
   },
   data(){
     return {
-      login_bg: require('../assets/login_bg.jpeg'),
+      login_bg: require('../assets/loginbg.jpeg'),
       autoLogin: false,
       formdata: {
         user: "",
@@ -42,7 +42,7 @@ export default{
             this.$message('账号或密码不能为空!');
       }else{
         let fdata = Qs.stringify(this.formdata);
-        this.$http.post('http://test.com:8090/login',fdata).then((res)=>{
+        this.$http.post('http://admin.zhoumengcheng.cn/login',fdata).then((res)=>{
              if(res.data.code == 1){
                localStorage.removeItem('info');
                localStorage.setItem('info',JSON.stringify(res.data.info));
