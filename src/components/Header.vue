@@ -34,12 +34,11 @@
           this.$store.commit('changeName');
           let node = document.querySelector('.login-btn');
           let that = this;
-          let url = 'http://test.com:8090/valilogin';
           node.setAttribute('href','javascript:void(0);');
           node.addEventListener('click',function(){
             that.$http({
               method: 'post',
-              url: url,
+              url: that.$store.state.baseUrl + '/valilogin',
               headers: {
                 'Authorization': JSON.parse(localStorage.getItem('info')).token
               }

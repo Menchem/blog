@@ -42,7 +42,7 @@ export default{
             this.$message('账号或密码不能为空!');
       }else{
         let fdata = Qs.stringify(this.formdata);
-        this.$http.post('http://admin.zhoumengcheng.cn/login',fdata).then((res)=>{
+        this.$http.post(this.$store.state.baseUrl + '/login',fdata).then((res)=>{
              if(res.data.code == 1){
                localStorage.removeItem('info');
                localStorage.setItem('info',JSON.stringify(res.data.info));
