@@ -69,7 +69,7 @@ export default{
       arr: []
     }
   },
-  mounted() {
+  created() {
     this.$http({
         method: 'get',
         url: 'http://admin.zhoumengcheng.cn/news',
@@ -80,6 +80,9 @@ export default{
        //console.log(res.data.content);
        this.arr = res.data.content;
     });
+  },
+  mounted() {
+    // dom加载需要运行的代码
   }
 }
 </script>
