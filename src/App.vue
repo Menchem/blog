@@ -9,9 +9,7 @@
 export default {
   data(){
     return {
-      store: {
-        a: 1
-      }
+      
     }
   },
   name: 'App',
